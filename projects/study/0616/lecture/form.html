@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <form action="" method="post">
+            <!-- action 속성은 폼 데이터를 전송할 URL을 지정한다. -->
+            <!-- method 속성은 폼 데이터를 전송하는 방식을 지정한다. -->
+            <!-- post 방식은 데이터를 숨겨서 전송하며, get 방식은 URL에 데이터를 포함시켜 전송한다. -->
+            <label for="name">이름</label>
+            <input type="text" 
+                    id="name" 
+                    name="name"
+                    placeholder="이름을 입력하세요" 
+                />
+            <br />
+            <br />
+            <!-- label 태그는 입력 필드에 대한 레이블을 정의한다. -->
+            <!-- for 속성은 레이블과 입력 필드를 연결한다. -->
+            <!-- id 속성은 입력 필드의 고유 식별자를 지정한다. -->
+
+            <label for="email">이메일</label>
+            <input type="email"
+                    id="email"
+                    name="email"
+                    placeholder="이메일을 입력하세요" 
+                    />
+            <br />
+            <br />
+
+            <label for="password">비밀번호</label>
+            <input type="password"
+                    id="password"
+                    name="password" 
+                    placeholder="비밀번호를 입력하세요"
+                    />
+            <br />
+            <br />
+
+            <input type="submit" value="전송" />
+            <!--input 태그는 사용자 입력을 받기 위한 필드를 생성한다.-->
+            <!-- type 속성은 입력 필드의 유형을 지정한다. -->
+            <!-- submit 버튼은 폼 데이터를 서버로 전송하는 역할을 한다. -->
+            <!-- value 속성은 버튼에 표시될 텍스트를 지정한다. -->
+        </form>
+        <br />
+
+        <form action="" method="get">
+            <fieldset>
+                <legend>개인 정보</legend>
+                <ul>
+                    <li>
+                        <label for="name">이름</label>
+                        <input type="text" 
+                                id="name" 
+                                name="name"
+                                placeholder="이름을 입력하세요"
+                                />
+                    </li>
+                    <li>
+                        <label for="mail">메일 주소</label>
+                        <input type="text" 
+                                id="mail" 
+                                name="mail"
+                                placeholder="메일을 입력하세요"
+                                />
+                    </li>
+                    <li>
+                        <label for="age">나이</label>
+                        <input type="number"
+                                id="age" 
+                                name="age"
+                                min="0"
+                                max="120"
+                                placeholder="Enter your age"
+                                />
+                    </li>
+                    <li>
+                        <label for="subscribe">구독하기</label>
+                        <input type="checkbox"
+                                name="subscribe"                               
+                                />
+                        <!-- 체크박스는 사용자가 선택할 수 있는 옵션을 제공한다. -->
+                        <!-- 체크박스는 name이 고유값으로 입력되어야 서버에 전송될때 오류가 없다.-->
+
+                        <label for="subscribe2">구독하기2</label>
+                        <input type="checkbox"
+                                name="subscribe2"                               
+                                />
+
+                        <label for="subscribe3">구독하기3</label>
+                        <input type="checkbox"
+                                name="subscribe3"                               
+                                />
+                    </li>
+
+                    <li>
+                        <label><input type="radio" name="gender" />남자</label>
+                        <label><input type="radio" name="gender" />여자</label>
+                    </li>
+                    <!-- 라디오 버튼은 사용자가 여러 옵션 중 하나를 선택할 수 있게 한다. -->
+                    <!-- 라디오 버튼은 name이 같아도 서버에 사용자가 선택한 정보만 전송된다. -->
+
+                    <li>
+                        <input type="file" name="file" />
+                    </li>
+                    <li>
+                        <input type="date" name="date" />
+                    </li>
+                    <li>
+                        <input type="range" name="range" min="0" max="100"/>
+                    </li>
+                    <li>
+                        <input type="color" name="color" />
+                    </li>
+
+                    <li>
+                        <label for="country">Select your country</label>
+                        <select id="country" name="country">
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="southkorea">SouthKorea</option>
+                            <option value="uk">UK</option>
+                        </select>
+                    </li>
+
+                    <li>
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="5" cols="50" placeholder="Type your message here..."></textarea>
+                    </li>
+
+                    <li>
+                        <button type="submit">Submit</button>
+                    </li>
+
+                </ul>
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend> 납품자 정보 </legend>
+
+            <ol>
+                <li>
+                    <label for="supplier-name"> 납품자 이름 : </label>
+                    <input type="text" id="supplier-name" name="supplier-name" required />
+                <!-- required 속성은 필수 입력 필드를 지정한다. -->
+                </li> 
+
+                <br />
+                
+                <li>
+                    <label for="email"> E-mail : </label>
+                    <input type="email" id="email" name="email" required />
+                </li>
+
+                <br />
+
+                <li>
+                    <label for="homepage"> 홈페이지 : </label>
+                    <input type="url" id="homepage" name="homepage" />
+                </li>
+
+                <br />
+
+                <li>
+                    <label for="select"> 지역 : </label>
+                    <select id="select" name="select">
+                        <option value="seoul">서울</option>
+                        <option value="busan">부산</option>
+                        <option value="incheon">인천</option>
+                        <option value="daegu">대구</option>
+                        <option value="gwangju">광주</option>
+                    </select>
+                </li>
+            </ol>
+        </fieldset>   
+
+            <fieldset>
+                <legend> 납품 정보 </legend>
+
+                <ul>
+                    <li>
+                        <label for="product"> 상품명 : </label>
+                        <input type="text" id="product" name="product" />
+                    </li>
+                
+                <br />
+                
+                    <li>
+                        <label for="quantity"> 납품 수량 : </label>
+                        <input type="unmber" id="quantity" name="quantity" min="100" max="1000000" placeholder="최소 100" />
+                    </li>
+
+                <br />
+
+                    <li>
+                        <label for="quailty"> 납품 등급 : </label>
+                        <input type="range" id="quality" name="quality" min="1" max="100" />
+                    </li>
+
+                <br />
+                    <li>
+                        <label for="etc"> 기타사항 : </label>
+                        <textarea id="etc" name="etc" rows="4" cols="50" placeholder="기타사항을 입력하세요"></textarea>
+                    </li>    
+
+                </ul>
+            </fieldset>
+    </form>
+
+    <button type="sendmessage">Send message</button>
+
+</body>
+</html>
