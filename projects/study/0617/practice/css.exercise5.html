@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습</title>
+    <style>
+        header, footer {
+            background-color: #0000FF;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        header {
+            height: 60px;
+        }
+        footer{
+            height: 40px;
+        }
+        main {
+            width: 80%;
+            margin: 0 auto;
+        }
+        section {
+            display: flex;
+            gap: 20px;
+        }
+        .left {
+            width: 30%;
+            background-color: lightcoral;
+        }
+        .right {
+            width:70%;
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>웹 페이지 제목</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="left">
+                <p>왼쪽 열</p>
+            </div>
+            <div class="right">
+                <p>오른쪽 열</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>저작권 &copy; 2025</p>
+    </footer>
+</body>
+</html>
