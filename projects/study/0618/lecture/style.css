@@ -1,0 +1,110 @@
+body {
+    background-color: #FFFBE6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;   
+}
+.cat {
+    position: relative;
+    width: 200px;
+    height: 200px;  
+}
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: #ffee0072;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.ear {
+    width: 60px;
+    height: 60px;
+    background-color: #ffee00b0;
+    position: absolute;
+    top: -30px;
+    border-radius: 50% 50% 0 0;
+    z-index: 0;
+}
+.ear.left {
+    left: 0;
+    transform: rotate(-30deg);
+}
+.ear.right {
+    right: 0;
+    transform: rotate(30deg);
+}
+.eye {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+}
+.eye.left{
+    left: 50px;
+} 
+.eye.right {
+    right: 50px;
+}
+.nose { 
+    width: 16px;
+    height: 16px;
+    background-color: #D46a6a;
+    position: absolute;
+    top: 100px;
+    left: 45%;
+    transform: tanslateX(-50%);
+    border-radius: 50%;
+}
+.whisker1 {
+    width: 60px;
+    height: 2px;
+    background-color: #555;
+    position: absolute;
+    top: 105px;
+}
+.whisker2 {
+    width: 65px;
+    height: 2px;
+    background-color: #555;
+    position: absolute;
+    top: 125px;
+}
+.whisker3 {
+    width: 70px;
+    height: 2px;
+    background-color: #555;
+    position: absolute;
+    top: 145px;
+}
+.whisker1.left {
+    left: -60px;
+}
+.whisker1.right {
+    right: -60px;
+}
+.whisker2.left {
+    left: -60px;
+}
+.whisker2.right {
+    right: -60px;
+}
+.whisker3.left {
+    left: -60px;
+}
+.whisker3.right {
+    right: -60px;
+}
+.mouth {
+    width: 45px;
+    height: 20px;
+    background-color: #FF0000;
+    position: absolute;
+    top: 70%;
+    left: 38.5%;
+    border-radius: 0 0 50px 50px;
+}
