@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 구조 예시</title>
+  </head>
+  <style>
+    h1 ~ div {
+      color: #FFFFFF;
+    }
+    img[src^="image"] {
+      background-color: #00FF00;
+    }
+    input:hover {
+      background-color: #FF0000;
+    }
+    input:focus {
+      background-color: #0000FF;
+    }
+    input:active {
+      background-color: #FFF000;
+    }
+    p:nth-child(odd) {
+      background-color: #FF0000;
+    }
+    p:nth-child(even) {
+      background-color: #0000FF;
+    }
+    p:first-child {
+      background-color: #00FF00;
+    }
+    p:last-child {
+      background-color: #000000;
+    }
+    p:nth-child(3n+1) {
+      background-color: #FF00F0;
+    }
+    div > p > strong {
+      font-weight: bold;
+      color: #FF6000;
+    }
+  </style>
+  <body>
+    <section>
+      <h1>
+        <strong>제목 강조</strong>
+      </h1>
+      <img src="image.jpg" alt="예시 이미지" />
+      <div>
+        <p><strong>첫 번째 단락 강조</strong></p>
+        <p><strong>두 번째 단락 강조</strong></p>
+        <p><strong>세 번째 단락 강조</strong></p>
+        <p><strong>네 번째 단락 강조</strong></p>
+        <p><strong>다섯 번째 단락 강조</strong></p>
+        <p><strong>여섯 번째 단락 강조</strong></p>
+        <!--<input type="text" />-->
+      </div>
+    </section>
+  </body>
+</html>
