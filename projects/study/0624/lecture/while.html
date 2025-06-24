@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>While문 학습</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            /*
+            // while문 예제
+            let i = 2;
+            let j = 1;
+            console.log(`구구단 출력`);
+            console.log(`${i}단`);
+            while (j < 10) {
+                console.log(`${i}*${j} = ${i*j}`);
+                j++;
+            }
+            // 팩토리얼 계산기 방법 1
+            let k = 5;
+            let result = 1;
+            while (k > 0) {
+                result *= k;
+                k--;
+            }
+            console.log(result);
+
+            // 팩토리얼 계산기 방법 2
+            let i = Number(prompt("숫자입력"));
+            let j =1;
+            while(i > 1) {
+                j = i*j;
+                i--;
+            }
+            console.log(`${j}`)
+
+            let sum = 0;
+            for (let i = 1; i < 11; i++) {
+                if ( i % 2 !==0 ) continue;
+                sum += i;
+            } 
+            console.log("짝수의 합:", sum);
+
+            let i = 1;
+            while (i < 11) {
+                //if (i % 2 !== 0) continue;
+                if (i === 5) break;
+                if ( i === 3) {
+                    i++;
+                    continue;
+                }
+                console.log(`>>>${i}`);
+                i++;
+            }
+            
+
+            // 사용자 나이를 입력받아 미성년자/성인 여부 판단하기
+            let i = Number(prompt("나이 입력"));
+            if (i > 20){
+                alert(`성인입니다.`);
+            }
+            else {
+                alert (`미성년자입니다`);
+            }
+            
+            // 1~100까지 숫자중에서 짝수만 합산하기
+            let sum = 0;
+            for ( let j = 1; j < 101; j++ ) {
+                if ( j % 2 ===0 ) sum +=j;
+            }
+            alert (sum);
+            */
+
+            // do.. while 을 이용해 숫자를 입력받고 종료조건 처리하기 ("exit" 입력시 종료)
+            let num = prompt ( "숫자를 입력하세요.");
+            while (num !== "exit") {
+            num = prompt("숫자를 입력하세요.");
+            console.log(num);
+            }
+        </script>
+    </body>
+</html>

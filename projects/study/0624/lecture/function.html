@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>함수 예제</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            //함수 예제
+            function greet() {
+                alert("반갑습니다!");
+            }
+            greet();
+
+            //해당 함수(스코프) 내에서 변수가 선언되고 변수가 호출되어야 정상적인 처리가 가능하다. 외부에서 호출시 함수로 호출해야함.
+            function showName() {
+                let name = "홍길동";
+                name = "이순신";
+                console.log(name);
+            }
+            showName();
+
+            function add(a,b) {
+                return a + b;
+             
+            }
+            let sum = add(3,5);
+
+            function calculateBMI (weight, height) {
+                return weight / (height * height);
+            }
+
+            let bmi = calculateBMI (75, 175);
+            alert(bmi);
+        </script>
+    </body>
+</html>
