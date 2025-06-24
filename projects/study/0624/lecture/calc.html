@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>함수 계산기 예제</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            // 함수 계산기 예제
+
+            // 더하기 함수
+            function add(a,b) {
+                return a + b;
+            }
+
+            const add2 = function (a,b) {
+                return a + b;
+            }
+
+            // 빼기 함수
+            function sub (c,d) {
+                return c - d;
+            }
+
+            const sub2 = function (c,d) {
+                return c - d
+            }
+
+            // 곱하기 함수
+            function mul(e,f) {
+                return e * f;
+            }
+
+            const mul2 = function (e,f) {
+                return e * f;
+            }
+
+            // 나누기 함수
+            function div(g,h) {
+                if ( g > h ){
+                return g / h;
+                }
+                else{
+                    return h /g;
+                }
+            }
+
+            const div2 = function (g,h) {
+                if ( g > h ){
+                return g / h;
+                }
+                else{
+                    return h / g;
+                }
+            }
+
+            // 나머지 함수
+            function rem(i,j) {
+                if ( i > j ){
+                return i % j;
+                }
+                else{
+                    return j % i;
+                }
+            }
+
+            const rem2 = function (i,j) {
+                if ( i > j ){
+                return i % j;
+                }
+                else{
+                    return j % i;
+                }
+            }
+
+            // 사용자 입력 받기
+
+            const num1 = Number(prompt("첫번째 숫자를 입력하세요."));
+            const operator = prompt("연산자를 입력하세요.");
+            const num2 = Number(prompt("두번째 숫자를 입력하세요."));
+
+            // 연산자에 따른 함수 호출
+
+            let result = 0;
+            if (operator === "+") {
+                result = add(num1, num2);
+            }
+            else if (operator === "-") {
+                result = sub(num1, num2);
+            }
+             else if (operator === "*") {
+                result = mul(num1, num2);
+            }
+             else if (operator === "/") {
+                result = div(num1, num2);
+            }
+             else if (operator === "%") {
+                result = rem(num1, num2);
+            }
+            else {
+                result = "잘못된 연산자입니다.";
+            }
+
+            alert(result);
+        </script>
+    </body>
+</html>
