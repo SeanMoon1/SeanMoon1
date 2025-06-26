@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM 예제</title>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: #FF0000; 
+            }
+
+            .active {
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <p id="greeting">안녕하세요! 반갑습니다.</p>
+        <img src="https://picsum.photos/300/300" alt="random image" />
+        <button id="change-image">이미지 변경</button>
+        <div id = "box" class = "box">Box</div>
+        <button id="change-box">박스 색 변경</button>
+        <div id ="element-add">요소 추가</div>
+        <button id="element-add-button">요소 추가 버튼</button>
+        <button id="element-move-button">요소 이동 버튼</button>
+        <button id="remove-button">요소 삭제 버튼</button>
+        <script>
+          let text = document.getElementById("greeting");
+          text.innerText = "Hello, JavaScript"
+        
+          //let image = document.getElementsByTagName("img");
+          //image[0].src = "https://picsum.photos/300/400";
+
+          let button = document.getElementById("change-image");
+          button.addEventListener("click", function (){
+            let image = document.getElementsByTagName("img");
+            image[0].src = "https://picsum.photos/500/300";
+          });
+
+          //let box = document.getElementById("box");
+          //box.style.backgroundColor = "blue";
+
+          let button2 = document.getElementById("change-box");
+          button2.addEventListener("click", function(){
+            let box = document.getElementById("box");
+            box.style.backgroundColor = "#0000FF";
+          });
+
+          box.addEventListener("mouseover", function(){
+           let box = document.getElementById("box");
+            box.classList.add("active");
+          });
+
+           box.addEventListener("mouseout", function(){
+           let box = document.getElementById("box");
+            box.classList.remove("active");
+          });
+
+          //toggle 버튼 추가 ( 자습 )
+
+          let elementAddButton2 = document.getElementById("element-add-button");
+          elementAddButton2.addEventListener("click", function(){ 
+            let elementAdd = document.getElementById("element-add");
+            let elementAddButton = document.createElement("div");
+            elementAddButton.innerText = "추가"
+            elementAddButton.style.backgroundColor = "#0000FF";
+            elementAddButton.style.color = "#FF0000";
+            elementAddButton.style.padding = "10px 20px";
+            elementAddButton.style.borderRadius = "5px";
+            elementAddButton.style.cursor = "pointer";
+            elementAddButton.style.boxShadow = "0 0 10px 0 rgba(0, 0, 0, 0.7)";
+            elementAdd.appendChild(elementAddButton);
+          });
+
+          let moveElementButton = document.getElementById("element-move-button");
+          moveElementButton.addEventListener("click", function(){
+            let box = document.getElementById("box");
+            let body = document.getElementsByTagName("body");
+            body[0].insertBefore(box, body[0].firstChild);
+          });
+
+          let removeElementButton = document.getElementById("remove-button");
+          removeElementButton.addEventListener("click", function(){
+            //let title = document.getElementById("greeting");
+            //title.remove();
+            let elementAddDiv = document.getElementById("element-add");
+            elementAddDiv.firstChild.parentElement.removeChild(elementAddDiv.lastChild);
+          });
+        </script>
+    </body>
+</html>
