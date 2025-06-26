@@ -31,21 +31,21 @@
 
             let addButton = document.getElementById("add-button");
             addButton.addEventListener("keydown", function(event){
-                if (event.key === 'Enter'){
-            // 입력창에 글을 쓰고 Enter를 누르면 목록에 추가되도록 구현
-            // 1. ol 리스트 가져오기
-            let list = document.getElementById("list");
-            // 2. li 요소 하나 create 하기
-            let li = document.createElement("li");
-            // 3. input 요소 가져오기
-            let input = document.getElementById("input");
-            // 4. input 요소의 값 가져오기
-            let inputValue = input.value;
-            // 5. li 요소의 텍스트를 input 요소의 값으로 변경하기
-            li.innerText = inputValue;
-            // 6. ol 요소에 li 요소를 추가하기
-            list.appendChild(li);
-                };
+                if (event.key === "Enter"){
+                    // 입력창에 글을 쓰고 Enter를 누르면 목록에 추가되도록 구현
+                    // 1. ol 리스트 가져오기
+                    let list = document.getElementById("list");
+                    // 2. li 요소 하나 create 하기
+                    let li = document.createElement("li");
+                    // 3. input 요소 가져오기
+                    let input = document.getElementById("input");
+                    // 4. input 요소의 값 가져오기
+                    let inputValue = input.value;
+                    // 5. li 요소의 텍스트를 input 요소의 값으로 변경하기
+                    li.innerText = inputValue;
+                    // 6. ol 요소에 li 요소를 추가하기
+                    list.appendChild(li);
+                }
             });
             
         </script>
