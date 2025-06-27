@@ -9,6 +9,16 @@
 - **Response(응답)**: 서버가 클라이언트의 요청에 대해 보내는 메시지. 상태 코드(200, 404 등), 헤더, 바디(HTML, JSON 등)로 구성됩니다.
 - 이 구조를 통해 웹에서 정보가 오고 갑니다.
 
+## Request 구성 요소
+- **Request Line**: 요청 방식(GET, POST 등), 요청 URL, HTTP 버전
+- **Headers**: 요청에 대한 메타데이터 (예: User-Agent, Accept 등)
+- **Body**: POST 방식 등에서 전송되는 데이터
+
+## Response 구성 요소
+- **Status Line**: HTTP 버전, 상태 코드(200, 404 등), 상태 메시지
+- **Headers**: 응답에 대한 메타데이터 (예: Content-Type, Content-Length 등)
+- **Body**: 실제 응답 데이터 (HTML, JSON 등)
+
 ---
 
 ### Ajax, forward, redirect 차이
