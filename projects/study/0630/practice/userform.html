@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UserForm</title>
+    </head>
+    <body>
+        <form id="signupForm">
+        <input id="name" type="text" placeholder="이름을 입력하세요" onkeyup="enterkey()"; value="" required /><br>
+        <input id="email" type="email" placeholder="email을 입력하세요" required /><br>
+        <input id="password" type="password" placeholder="비밀번호 입력"><br>
+        <input id="confirmPassword" type="password" placeholder="비밀번호 확인"><br>
+        <button type="submit">가입</button>
+        </form>
+
+        <script>
+            document.getElementById("signupForm").addEventListener("submit", function(e) {
+            e.preventDefault(); // 폼 제출 막기
+
+            const username = document.getElementById("name").value.trim();            
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (!username) {
+            alert("이름을 입력하세요.");
+            return;
+            }
+
+            const emailRegex = /^[\w.-]+@[\w.-]+\.[A-Za-z]{2,}$/;
+            if (!emailRegex.test(email)) {
+            alert("올바른 이메일을 입력하세요.");
+            return;
+            }
+
+            if (password.length < 8) {
+            alert("비밀번호는 8자 이상이어야 합니다.");
+            return;
+            }
+
+            if (password !== confirmPassword) {
+            alert("비밀번호가 일치하지 않습니다.");
+            return;
+            }
+
+            alert("회원가입 성공!");
+            // 이곳에 실제 서버 전송 코드를 추가
+
+            });
+
+            function enterkey() {
+                if (window.event.keyCode == 13) {
+                    alert("성공");
+                    return;
+                }
+            }
+        </script>
+    </body>
+</html>
