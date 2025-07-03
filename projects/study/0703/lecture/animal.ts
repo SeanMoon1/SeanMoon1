@@ -1,15 +1,28 @@
 class Animal {
-  sound: string = "왈왈";
+  sound(): void {
+    console.log("Some generic animal sound");
+  }
 }
 
 class Dog extends Animal {
-  sound1 = "멍멍";
+  sound(): void {
+    console.log("멍멍");
+  }
 }
 
 class Cat extends Animal {
-  sound2 = "야옹";
+  sound(): void {
+    console.log("야옹");
+  }
 }
 
-console.log(Dog.name, Cat.name);
+let dog = new Dog();
+dog.sound();
 
-//다시 해보기
+let cat = new Cat();
+cat.sound();
+
+const animals: Animal[] = [new Dog(), new Cat()];
+for (const a of animals) {
+  a.sound();
+}
