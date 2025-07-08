@@ -2,12 +2,12 @@
 const user = { id: 1, name: "Kim", age: 20, address: "Seoul" };
 const updated = { id: 2, ...user, name: "Lee", age: 25 };
 
-//console.log(updated);
+console.log(updated);
 
 const userArr = [1, 2, 3, 4, 5];
 const updatedArr = [1, 2, ...userArr, 6, 7];
 
-//console.log(updatedArr);
+console.log(updatedArr);
 
 //구조분해
 const userSplit = { id: 1, name: "Kim", age: 20, address: "Seoul" };
@@ -50,15 +50,15 @@ const squared = evens.map((num) => num * num);
 const sum = squared.reduce((acc, cur) => acc + cur);
 // console.log(sum);
 
-async function fetchData() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("data OK!");
-    }, 2000);
-  });
-}
+//async function fetchData() {
+//  return new Promise((resolve) => {
+//    setTimeout(() => {
+//      resolve("data OK!");
+//    }, 2000);
+//  });
+//}
 
 async function loadData() {
   const data = await fetchData();
-  console.log(data);
+  //console.log(data);
 }
