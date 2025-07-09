@@ -4,6 +4,18 @@ import './App.css'
 import * as D from './data'
 import {Component} from 'react'
 import ClassComponent from './ClassComponent'
+import OnClick from './pages/onClick'
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <ul>
+//         <ClassComponent href="https://www.google.com" text="go to Google" />
+//         <ClassComponent href="https://www.twitter.com" text="go to Twitter" />
+//       </ul>
+//     );
+//   }
+// }
 
 // export default function App() {
 //   return (
@@ -11,10 +23,17 @@ import ClassComponent from './ClassComponent'
 //       <ClassComponent href="https://www.google.com" text="go to Google" />
 //       <ClassComponent href="https://www.twitter.com" text="go to Twitter" />
 //     </ul>
-//   )
+//   );
 // }
 
 const App = () => {
-  return <h1>function component</h1>
+  return (
+    <ul>
+      <ClassComponent href="https://www.google.com" text="go to Google" />
+      <ClassComponent href="https://www.twitter.com" text="go to Twitter" />
+      <OnClick />
+    </ul>
+  )
 }
+
 export default App
