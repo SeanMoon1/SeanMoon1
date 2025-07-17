@@ -16,3 +16,25 @@ index.css 파일에 들어가
 @tailwind components;
 @tailwind utilities;
 추가하기
+
+index.tsx 파일에 들어가
+import "@fontsource/material-icons";
+추가하기
+
+postcss.config.js 파일 생성
+module.exports = {
+plugins: {
+tailwindcss: {},
+autoprefixer: {},
+},
+};
+
+tailwind.config.js 파일 생성
+/_ @type {import('tailwindcss').Config} _/
+module.exports = {
+content: ["./src/**/*.{js,jsx,ts,tsx}"],
+theme: {
+extend: {},
+},
+plugins: [require("@tailwindcss/line-clamp"), require("daisyui")],
+};
