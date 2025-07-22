@@ -38,3 +38,20 @@ extend: {},
 },
 plugins: [require("@tailwindcss/line-clamp"), require("daisyui")],
 };
+
+
+### github setting
+mkdir my-first-repo
+cd my-first-repo
+git init
+git config --global user.name "학생이름"
+git config --global user.email "학생이메일@example.com"
+touch index.html
+
+오류가 생길시 생성된 .git 폴더를 날리고 재생성하면 된다.
+
+echo "<h1>Hello Git</h1>" > index.html
+git status
+git add index.html
+git commit -m "처음 커밋"
+git log --oneline
