@@ -13,6 +13,9 @@ npm i -D @tailwindcss/line-clamp
 통합버전
 npm install -D tailwindcss@3.4.17 postcss autoprefixer @tailwindcss/postcss daisyui@4.12.12 @tailwindcss/line-clamp
 npm i redux @reduxjs/toolkit react-redux
+npm i redux-logger redux-thunk
+npm i -D @types/redux-logger @types/redux-thunk
+npm install zustand
 
 
 tailwind css 미적용시 적용방법
@@ -64,3 +67,11 @@ git log --oneline
 
 ### git clone 하는 방법
 git clone https://githube.com/2jisu/do-it-react-with-ts.git 처럼 원하는 github 주소 복사해서 붙여넣기. 
+
+git add.
+git commit -m "트렐로 데모"
+git push
+
+git diff
+echo "추가 내용" >> index.html
+git restore index.html
