@@ -15,6 +15,10 @@ npm install -D tailwindcss@3.4.17 postcss autoprefixer @tailwindcss/postcss dais
 npm i redux @reduxjs/toolkit react-redux
 npm i redux-logger redux-thunk
 npm i -D @types/redux-logger @types/redux-thunk
+npm i -D @types/react-dnd
+npm i react-dnd react-dnd-html5-backend
+npm install @hello-pangea/dnd
+npm i react-router-dom
 npm install zustand
 
 
