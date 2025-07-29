@@ -20,7 +20,7 @@ npm i react-dnd react-dnd-html5-backend
 npm install @hello-pangea/dnd
 npm i react-router-dom
 npm install zustand
-
+react-dnd 문제가 발생할 경우 ch06_1 폴더의 package.json 가져다 사용하기
 
 tailwind css 미적용시 적용방법
 index.css 파일에 들어가
