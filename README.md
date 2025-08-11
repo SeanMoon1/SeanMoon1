@@ -2,7 +2,7 @@
 
 ### My name is SeungYeon Moon. But you can also call me Sean!
 
-> I want to be a developer who professor on Frontend, Backend and cloud, software architect.
+> I want to be a professional developer strong in to Frontend, Backend and cloud, software architect.
 
 ### 🔧 Skills
 
