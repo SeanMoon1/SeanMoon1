@@ -22,7 +22,8 @@ let UserService = class UserService {
     constructor(userRepository) {
         this.userRepository = userRepository;
     }
-    async createUser(user) {
+    async createUser(createUserDto) {
+        const user = this.userRepository.create(createUserDto);
         return this.userRepository.save(user);
     }
     async getUser(email) {
