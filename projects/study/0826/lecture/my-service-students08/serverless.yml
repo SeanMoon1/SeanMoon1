@@ -1,0 +1,69 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: seanmoon
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: my-service-students08
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: my-service-students08
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-northeast-2
+  deploymentBucket:
+    name: tmd-genai1-students08
+    blockPublicAccess: true
+    serverSideEncryption: AES256
+  environment:
+    USERS_TABLE: ${self:service}-users-${sls:stage}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:GetItem
+        - dynamodb:Query
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+      Resource:
+        - arn:aws:dynamodb:ap-northeast-2:654654611599:table/my-service-students08-users-dev
+
+resources:
+  Resources:
+    UsersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.USERS_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
+
+functions:
+  getUser:
+    handler: handler.getUser
+    events:
+      - httpApi:
+          path: /users/{id}
+          method: get
+
+  createUser:
+    handler: handler.createUser
+    events:
+      - httpApi:
+          path: /users
+          method: post
+
+  updateUser:
+    handler: handler.updateUser
+    events:
+      - httpApi:
+          path: /users/{id}
+          method: put
+
+  deleteUser:
+    handler: handler.deleteUser
+    events:
+      - httpApi:
+          path: /users/{id}
+          method: delete
